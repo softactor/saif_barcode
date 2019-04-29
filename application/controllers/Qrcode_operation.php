@@ -80,7 +80,7 @@ class Qrcode_operation extends CI_Controller {
         $this->ciqrcode->generate($params);
         $this->session->set_flashdata('success_message','QRcode code has been successfully created.');
         $this->session->set_flashdata('qr_image_url',$path);
-        $redirect_url = base_url() . "Qrcode_operation/ondemand_gen_qrcode";
+        $redirect_url = base_url() . "index.php/Qrcode_operation/ondemand_gen_qrcode";
         redirect($redirect_url);
     }
     public function csvToArray($filename = '', $delimiter = ',') {
