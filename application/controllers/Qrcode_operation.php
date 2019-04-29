@@ -64,7 +64,8 @@ class Qrcode_operation extends CI_Controller {
         $this->load->view('barcode/on_demand_qrcode', $data);
     }
     public function gen_qrcode(){
-        $qr_text    =   $this->input->post('qr_text');
+        
+        echo $qr_text    =   $this->input->post('qr_text'); exit;
         $this->load->library('Ciqrcode');
         $path   =   'qrcodes/'.time().'.png';
         $code   =   "";
