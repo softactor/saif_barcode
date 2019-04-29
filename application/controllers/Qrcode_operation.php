@@ -65,7 +65,7 @@ class Qrcode_operation extends CI_Controller {
     }
     public function gen_qrcode(){
         
-        echo $qr_text    =   $this->input->post('qr_text'); exit;
+        $qr_text    =   $this->input->post('qr_text');
         $this->load->library('Ciqrcode');
         $path   =   'qrcodes/'.time().'.png';
         $code   =   "";
