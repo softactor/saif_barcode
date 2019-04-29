@@ -19,6 +19,9 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 # IDE Files
 #-------------------------
 /nbproject/
+nbproject/
+/qrcodes/
+qrcodes/
 .idea/*
 
 ## Sublime Text cache files
