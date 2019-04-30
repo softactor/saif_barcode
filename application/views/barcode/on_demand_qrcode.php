@@ -48,14 +48,12 @@
                       }
                     html, body {
                         margin: 0;
-                        border: 1px solid black;
                       }
                     img{
                         width: 1.55in;
                         height: 1.0in;
                         float: left;
                         margin-left: .1in;
-                        margin-top: .5in;
                     }
                 }
             </style>
