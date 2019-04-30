@@ -65,6 +65,23 @@ class Qrcode_operation extends CI_Controller {
     }
     public function gen_qrcode(){
         
+        
+        $rules = [
+            'qr_text' => 'required',
+        ];
+
+        $message = [
+            'qr_text.required' => 'Please enter the QR Text'
+        ];
+        $validation = Validator::make($request->all(), $rules, $message);
+        // Check the validation 
+        if ($validation->fails()) {
+            return $redirect_url = base_url() . "index.php/Qrcode_operation/ondemand_gen_qrcode";
+        redirect($redirect_url)
+                            ->withErrors($validation)
+                            ->with('error', 'Validation fail!')
+                            ->withInput();
+        }
         $qr_text    =   $this->input->post('qr_text');
         $this->load->library('Ciqrcode');
         $path   =   'qrcodes/'.time().'.png';

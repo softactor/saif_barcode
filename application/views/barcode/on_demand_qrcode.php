@@ -28,8 +28,8 @@
             <style type="text/css">
                 @media print {
                     html, body {
-                        width: 105mm;
-                        height: 287mm;
+                        width: 3.30in;
+                        height: 1.0in;
                       }
                     img{
                         width: 90%;
