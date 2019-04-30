@@ -6,7 +6,7 @@
 <div class="row">
     <div class="col-md-8">
         <h2><?php echo $title; ?></h2>
-        <form action="<?php echo base_url('index.php/Qrcode_operation/gen_qrcode'); ?>" method="post" enctype="multipart/form-data">
+        <form action="<?php echo base_url('Qrcode_operation/gen_qrcode'); ?>" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="text">Information:</label>
                 <textarea cols="50" rows="15" name="qr_text"></textarea>
@@ -26,21 +26,37 @@
         </span>
         <div id="product_qr_sec">
             <style type="text/css">
-                @media print {
+                @media screen {
                     @page {
-                        size: A4;
+                        size: 3.0in 1.0in ;
                         margin: 0;
                       }
                     html, body {
-                        margin-top: .85in;
-                        margin-left: .5in;
-                        margin-right: .5in;
-                        margin-bottom: 1.5in;
+                        margin: 0;
+                        border: 1px solid black;
                       }
                     img{
-                        width: 2.5in;
-                        height: 2.5in;
-                        padding: 5px;
+                        width: 1.95in;
+                        height: 1.3in;
+                        float: left;
+                        margin-left: .1in;
+                    }
+                }
+                @media print {
+                    @page {
+                        size: 3.30in 1.0in ;
+                        margin: 0;
+                      }
+                    html, body {
+                        margin: 0;
+                        border: 1px solid black;
+                      }
+                    img{
+                        width: 1.95in;
+                        height: 1.3in;
+                        float: left;
+                        margin-left: .3in;
+                        margin-top: .2in;
                     }
                 }
             </style>
@@ -49,7 +65,8 @@
                 $qr_image_url = $this->session->userdata('qr_image_url');
                 if (isset($qr_image_url) && !empty($qr_image_url)) {
                     ?>
-                    <img src="<?php echo base_url() . $qr_image_url ?>" width="150"/>
+                    <img src="<?php echo base_url() . $qr_image_url ?>"/>
+                    <img src="<?php echo base_url() . $qr_image_url ?>" style="margin-left: .4in"/>
                     <br>
                     <button type="button" class="btn btn-success" onclick="printQrcode('product_qr_sec');" id="print_id_button">Print</button>
                 <?php }
