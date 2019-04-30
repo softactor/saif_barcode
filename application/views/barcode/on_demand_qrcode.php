@@ -65,7 +65,7 @@
                         float: left;
                         writing-mode: vertical-lr; 
                         transform: rotate(180deg);
-                        margin-top: 15px; 
+                        margin-top: 20px; 
                         margin-left: -15px;
                     }
                 }
