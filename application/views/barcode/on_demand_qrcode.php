@@ -50,8 +50,8 @@
                         margin: 0;
                       }
                     img{
-                        width: 1.55in;
-                        height: .9in;
+                        width: 1.25in;
+                        height: .8in;
                         float: left;
                         margin-left: .1in;
                     }
