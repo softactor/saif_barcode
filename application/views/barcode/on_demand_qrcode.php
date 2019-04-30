@@ -32,7 +32,7 @@
                         margin: 0;
                       }
                     html, body {
-                        margin-top: 2.0in;
+                        margin-top: .5in;
                         margin-left: .5in;
                         margin-right: .5in;
                         margin-bottom: 1.5in;
