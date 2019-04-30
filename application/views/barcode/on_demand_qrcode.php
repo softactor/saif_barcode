@@ -27,15 +27,20 @@
         <div id="product_qr_sec">
             <style type="text/css">
                 @media print {
+                    @page {
+                        size: A4;
+                        margin: 0;
+                      }
                     html, body {
-                        width: 3.30in;
-                        height: 1.0in;
+                        margin-top: 2.0in;
+                        margin-left: .5in;
+                        margin-right: .5in;
+                        margin-bottom: 1.5in;
                       }
                     img{
-                        width: 3.30in;
-                        height: 1.0in;
+                        width: 2.5in;
+                        height: 2.5in;
                         padding: 5px;
-                        border: 1px solid black;
                     }
                 }
             </style>
