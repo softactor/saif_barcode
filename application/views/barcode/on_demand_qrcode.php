@@ -32,7 +32,8 @@
                         height: 1.0in;
                       }
                     img{
-                        width: 90%;
+                        width: 3.30in;
+                        height: 1.0in;
                         padding: 5px;
                         border: 1px solid black;
                     }
