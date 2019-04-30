@@ -61,11 +61,11 @@
                     }
                     .code_style{
                         text-align: center;
-                        font-size: 7px;
+                        font-size: 5px;
                         float: left;
                         writing-mode: vertical-lr; 
                         transform: rotate(180deg);
-                        margin-top: 22px; 
+                        margin-top: 15px; 
                         margin-left: -15px;
                     }
                 }
