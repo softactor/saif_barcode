@@ -51,7 +51,7 @@
                       }
                     img{
                         width: 1.55in;
-                        height: 1.0in;
+                        height: .9in;
                         float: left;
                         margin-left: .1in;
                     }
