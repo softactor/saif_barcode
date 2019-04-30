@@ -64,7 +64,8 @@ class Qrcode_operation extends CI_Controller {
         $this->load->view('barcode/on_demand_qrcode', $data);
     }
     public function gen_qrcode(){
-        $qr_text    =   $this->input->post('qr_text');
+        $qr_text        =   $this->input->post('qr_text');
+        $productCode    =   $this->input->post('code');
         $this->load->library('Ciqrcode');
         $path   =   'qrcodes/'.time().'.png';
         $params['data']     = $qr_text;
@@ -74,6 +75,7 @@ class Qrcode_operation extends CI_Controller {
         $this->ciqrcode->generate($params);
         $this->session->set_flashdata('success_message','QRcode code has been successfully created.');
         $this->session->set_flashdata('qr_image_url',$path);
+        $this->session->set_flashdata('productCode',$productCode);
         $redirect_url = base_url() . "index.php/Qrcode_operation/ondemand_gen_qrcode";
         redirect($redirect_url);
     }
