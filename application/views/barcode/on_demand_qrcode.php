@@ -6,7 +6,7 @@
 <div class="row">
     <div class="col-md-8">
         <h2><?php echo $title; ?></h2>
-        <form action="<?php echo base_url('Qrcode_operation/gen_qrcode'); ?>" method="post" enctype="multipart/form-data">
+        <form action="<?php echo base_url('index.php/Qrcode_operation/gen_qrcode'); ?>" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="text">Information:</label>
                 <textarea cols="50" rows="15" name="qr_text"></textarea>
@@ -33,7 +33,6 @@
                       }
                     html, body {
                         margin: 0;
-                        border: 1px solid black;
                       }
                     img{
                         width: 1.95in;
