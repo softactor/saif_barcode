@@ -67,14 +67,9 @@ class Qrcode_operation extends CI_Controller {
         $qr_text    =   $this->input->post('qr_text');
         $this->load->library('Ciqrcode');
         $path   =   'qrcodes/'.time().'.png';
-        $code   =   "";
-        $code.="M/C: ACS Charger"."\n";
-        $code.="Value: BDT 404 Crore"."\n";
-        $code.="Invoice Date: 27/08/2018"."\n"; 
-        $code.="Supplier: Nafiz Power Limited"."\n";
         $params['data']     = $qr_text;
         $params['level']    = 'H';
-        $params['size']     = 10;
+        $params['size']     = 5;
         $params['savename'] = FCPATH.$path;
         $this->ciqrcode->generate($params);
         $this->session->set_flashdata('success_message','QRcode code has been successfully created.');
