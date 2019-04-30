@@ -51,8 +51,8 @@
                         border: 1px solid black;
                       }
                     img{
-                        width: 1.95in;
-                        height: 1.3in;
+                        width: 1.55in;
+                        height: 1.0in;
                         float: left;
                         margin-left: .3in;
                         margin-top: .2in;
