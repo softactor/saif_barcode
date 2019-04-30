@@ -22,7 +22,7 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 nbproject/
 /qrcodes/
 qrcodes/
-application/config/
+application/config/*
 .idea/*
 
 ## Sublime Text cache files
