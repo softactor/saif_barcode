@@ -62,7 +62,6 @@
                     .code_style{
                         text-align: center;
                         font-size: 10px;
-                        line-height: 35px;
                         float: left;
                         writing-mode: vertical-lr; 
                         transform: rotate(180deg);
