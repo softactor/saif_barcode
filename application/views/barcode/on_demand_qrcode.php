@@ -13,7 +13,10 @@
             </div>
             <div class="form-group">
                 <label for="text">Information:</label>
-                <textarea cols="50" rows="15" name="qr_text"></textarea>
+                <textarea cols="50" rows="15" name="qr_text">
+                M/C:
+                Code: 
+                </textarea>
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
         </form>
