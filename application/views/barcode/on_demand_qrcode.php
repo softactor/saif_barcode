@@ -1,6 +1,9 @@
 <?php echo $header; ?>
 <!-- Example row of columns -->
 <div class="row">
+	<img src="<?php echo base_url() ?>public/images/logo.png"  />
+</div>
+<div class="row">
     <div class="col-md-8">
         <h2><?php echo $title; ?></h2>
         <form action="<?php echo base_url('index.php/Qrcode_operation/gen_qrcode'); ?>" method="post" enctype="multipart/form-data">
@@ -12,7 +15,8 @@
         </form>
     </div>
     <div class="col-md-4">
-        <span id="successfull_message_section">
+        <h2>Output</h2>
+		<span id="successfull_message_section">
             <?php
             $success_message = $this->session->userdata('success_message');
             if (isset($success_message) && !empty($success_message)) {
