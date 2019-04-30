@@ -61,7 +61,7 @@
                     }
                     .code_style{
                         text-align: center;
-                        font-size: 10px;
+                        font-size: 7px;
                         float: left;
                         writing-mode: vertical-lr; 
                         transform: rotate(180deg);
