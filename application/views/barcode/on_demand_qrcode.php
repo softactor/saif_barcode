@@ -54,8 +54,8 @@
                         width: 1.55in;
                         height: 1.0in;
                         float: left;
-                        margin-left: .3in;
-                        margin-top: .2in;
+                        margin-left: .1in;
+                        margin-top: .5in;
                     }
                 }
             </style>
@@ -65,7 +65,7 @@
                 if (isset($qr_image_url) && !empty($qr_image_url)) {
                     ?>
                     <img src="<?php echo base_url() . $qr_image_url ?>"/>
-                    <img src="<?php echo base_url() . $qr_image_url ?>" style="margin-left: .4in"/>
+                    <img src="<?php echo base_url() . $qr_image_url ?>" style="margin-left: .1in"/>
                     <br>
                     <button type="button" class="btn btn-success" onclick="printQrcode('product_qr_sec');" id="print_id_button">Print</button>
                 <?php }
