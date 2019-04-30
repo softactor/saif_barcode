@@ -69,7 +69,7 @@ class Qrcode_operation extends CI_Controller {
         $path   =   'qrcodes/'.time().'.png';
         $params['data']     = $qr_text;
         $params['level']    = 'H';
-        $params['size']     = 5;
+        $params['size']     = 4;
         $params['savename'] = FCPATH.$path;
         $this->ciqrcode->generate($params);
         $this->session->set_flashdata('success_message','QRcode code has been successfully created.');
