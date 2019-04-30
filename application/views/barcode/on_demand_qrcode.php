@@ -53,7 +53,7 @@
                         width: 1.25in;
                         height: .8in;
                         float: left;
-                        margin: 0 .15in .25in .15in;
+                        margin: .5in .15in 0 .15in;
                     }
                 }
             </style>
