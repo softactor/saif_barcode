@@ -19,4 +19,4 @@
     <body>
         <div class="container">
             <!--top menu section-->
-            <?php //$this->load->view('barcode/layout/top_menu'); ?>
+            <?php $this->load->view('barcode/layout/top_menu'); ?>

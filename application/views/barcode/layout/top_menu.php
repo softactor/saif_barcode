@@ -1,15 +1,12 @@
 <!-- The justified navigation menu is meant for single line per list item.
            Multiple lines will require custom code not provided by Bootstrap. -->
 <div class="masthead">
-    <h3 class="text-muted">Project name</h3>
+    <h3 class="text-muted">Project Qrcode</h3>
     <nav>
         <ul class="nav nav-justified">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Downloads</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="<?php echo base_url().'index.php/Qrcode_operation/gen_qrcode' ?>">On-demand</a></li>
+            <li><a href="<?php echo base_url().'index.php/Qrcode_operation/excel_to_qrcode' ?>">Import Excel Sheet</a></li>
+            <li><a href="<?php echo base_url().'index.php/Qrcode_operation/qrcode_list' ?>">Qrcode List</a></li>
         </ul>
     </nav>
 </div>

@@ -1,0 +1,1 @@
+var base_url_addr	=	'http://saifbarcode.local/';
