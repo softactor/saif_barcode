@@ -6,7 +6,8 @@
         <form action="<?php echo base_url('index.php/Qrcode_operation/excel_upload_process'); ?>" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="pwd">Sheet No:</label>
-                <input type="text" class="form-control" id="sheet_id" name="sheet_id">
+                <input type="text" class="form-control" id="sheet_id_show" name="sheet_id_show" value="<?php echo $sheetno; ?>" readonly>
+                <input type="hidden" class="form-control" id="sheet_id" name="sheet_id" value="<?php echo $sheetno; ?>">
             </div>
             <div class="form-group">
                 <label for="pwd">Excel File:</label>

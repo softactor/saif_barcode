@@ -10,7 +10,9 @@ class Qrcode_operation extends CI_Controller {
     /**
      * Index Page for this controller.
      */
-    public function excel_to_qrcode(){        
+    public function excel_to_qrcode(){   
+        $lrparam['table']   =   'qrcode_history';
+        $data['sheetno']    =   "Sheet-00".$this->common_model->get_last_row_id($lrparam);
         $data['title']      =   "Excel to Qrcode";
         $data['header']     = $this->load->view('barcode/layout/header', $data, true);
         $data['top_menu']   = $this->load->view('barcode/layout/top_menu', $data, true);
@@ -86,10 +88,12 @@ class Qrcode_operation extends CI_Controller {
         foreach($allDataInSheet as $qrcode){
             // generate qrcode and get the path:
             $lrparam['table']   =   'qrcode_history';
-            $qrcodeslno             = substr(trim($qrcode['A']), -3);
+            $qrcodeslno         = substr(trim($qrcode['A']), -3);
+            $qredes="Code:". trim($qrcode['A'])."\n";
+            $qredes.="M/C:". trim($qrcode['B']);
             $param  =   [
                 'code'      =>   $qrcodeslno,
-                'text'      =>   trim($qrcode['B']),
+                'text'      =>   $qredes,
                 'last_row'  =>   $this->common_model->get_last_row_id($lrparam)
             ];
             $qrcode_path    =   $this->gen_qrcode_nget_path($param);
