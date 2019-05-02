@@ -25,6 +25,15 @@
             }
         }
         function printQrcode(section_id){
+            $('#print_id_button').hide();
+            var divToPrint=document.getElementById(section_id);
+            newWin= window.open("");
+            newWin.document.write(divToPrint.outerHTML);
+            newWin.print();
+            newWin.close();
+
+        }
+        function printAutoQrcode(section_id){
             var divToPrint=document.getElementById(section_id);
             newWin= window.open("");
             newWin.document.write(divToPrint.outerHTML);

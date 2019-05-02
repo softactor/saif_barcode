@@ -83,7 +83,7 @@
                         </div>
                     </div>
                 </td>
-                <td><button type="button" class="btn btn-success" onclick="printQrcode( '<?php echo $product_qr_sec; ?>');" id="print_id_button">Print</button></td>
+                <td><button type="button" class="btn btn-success" onclick="printAutoQrcode( '<?php echo $product_qr_sec; ?>');" id="print_id_button">Print</button></td>
             </tr>
             <?php }} ?>
         </tbody>
