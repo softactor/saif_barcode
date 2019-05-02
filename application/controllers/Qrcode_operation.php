@@ -94,7 +94,7 @@ class Qrcode_operation extends CI_Controller {
             ];
             $qrcode_path    =   $this->gen_qrcode_nget_path($param);
             $qr_data = [
-                'sheet_id'      => 'S-001',
+                'sheet_id'      => $this->input->post('sheet_id'),
                 'code'          => $qrcode['A'],
                 'description'   => $qrcode['B'],
                 'qrimage_path'  => $qrcode_path,
