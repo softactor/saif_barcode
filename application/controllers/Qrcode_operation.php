@@ -62,7 +62,6 @@ class Qrcode_operation extends CI_Controller {
             $import_xls_file = 0;
         }
         $inputFileName = $path . $import_xls_file;
-        
         try {
             PHPExcel_Settings::setZipClass(PHPExcel_Settings::PCLZIP);
             $inputFileType = PHPExcel_IOFactory::identify($inputFileName);
