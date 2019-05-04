@@ -2,7 +2,7 @@
 <!-- Example row of columns -->
 <div class="row">
     <div class="col-md-12">
-        <h2>QR code List Page</h2>
+        <h3>QR code List Page</h3>
         <div class="row">
             <div class="col-md-12">
                 <form action="<?php echo base_url('Qrcode_operation/excel_upload_process'); ?>" method="post" enctype="multipart/form-data">

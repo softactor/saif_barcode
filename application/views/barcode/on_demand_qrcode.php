@@ -1,30 +1,27 @@
 <?php echo $header; ?>
-<!-- Example row of columns -->
 <div class="row">
-	<img src="<?php echo base_url() ?>public/images/logo.png"  />
-</div>
-<div class="row">
-    <div class="col-md-8">
-        <h2><?php echo $title; ?></h2>
+    <div class="col-md-6">
+        <h3>Manually generate qrcode: input</h3>
         <form action="<?php echo base_url('index.php/Qrcode_operation/gen_qrcode'); ?>" method="post" enctype="multipart/form-data">
             <div class="form-group">
-                <label for="text">Code:</label>
-                <input type="text" name="code" class="form-control" style="width: 62%" />
+                <label for="email">Code:</label>
+                <input type="text" class="form-control" id="code" placeholder="Enter Code" name="code">
             </div>
             <div class="form-group">
-                <label for="text">Information:</label>
-                <textarea cols="50" rows="5" name="qr_text"></textarea>
+                <label for="pwd">Description:</label>
+                <textarea class="form-control" rows="5" id="qr_text" name="qr_text"></textarea>
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
         </form>
     </div>
-    <div class="col-md-4">
-        <h2>Output</h2>
+    <div class="col-md-6">
+        <h3>Output</h3>
 		<span id="successfull_message_section">
             <?php
             $success_message = $this->session->userdata('success_message');
             if (isset($success_message) && !empty($success_message)) {
                 echo $success_message;
+                $this->session->unset_userdata('success_message');
             }
             ?>                
         </span>
@@ -38,7 +35,7 @@
                     html, body {
                         margin: 0;
                       }
-                    img{
+                    print_section img{
                         width: 1.95in;
                         height: 1.3in;
                         float: left;
@@ -53,7 +50,7 @@
                     html, body {
                         margin: 0;
                       }
-                    img{
+                    .print_section img{
                         width: 1.25in;
                         height: .8in;
                         float: left;
@@ -82,7 +79,9 @@
                     <div class="code_style"><?php echo $productCode; ?></div>
                     <br>
                     <button type="button" class="btn btn-success" onclick="printQrcode('product_qr_sec');" id="print_id_button">Print</button>
-                <?php }
+                <?php 
+                    $this->session->unset_userdata('success_message');
+                }
                 ?>
             </div>
         </div>

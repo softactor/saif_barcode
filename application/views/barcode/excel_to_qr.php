@@ -2,7 +2,7 @@
 <!-- Example row of columns -->
 <div class="row">
     <div class="col-lg-4">
-        <h2><?php echo $title; ?></h2>
+        <h3><?php echo $title; ?></h3>
         <form action="<?php echo base_url('index.php/Qrcode_operation/excel_upload_process'); ?>" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="pwd">Sheet No:</label>
