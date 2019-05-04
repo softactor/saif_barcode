@@ -81,6 +81,7 @@
                     <button type="button" class="btn btn-success" onclick="printQrcode('product_qr_sec');" id="print_id_button">Print</button>
                 <?php 
                     $this->session->unset_userdata('success_message');
+                    $this->session->unset_userdata('qr_image_url');
                 }
                 ?>
             </div>
